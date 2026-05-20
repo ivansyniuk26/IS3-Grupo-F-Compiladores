@@ -8,5 +8,7 @@ namespace Backend.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<Acreditacion> Acreditaciones { get; set; }
+
+        public DbSet<CertificadoEmitido> CertificadosEmitidos { get; set; }
     }
 }

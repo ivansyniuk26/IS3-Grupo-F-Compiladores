@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "n/agXIlJAtI=",
+  "dgSpecHash": "E3xzt736QiA=",
   "success": true,
   "projectFilePath": "/home/santiago/IS3_2026/IS3-Grupo-F-Compiladores/Backend/Backend.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,7 @@
     "/home/santiago/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/home/santiago/.nuget/packages/npgsql/8.0.2/npgsql.8.0.2.nupkg.sha512",
     "/home/santiago/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.2/npgsql.entityframeworkcore.postgresql.8.0.2.nupkg.sha512",
+    "/home/santiago/.nuget/packages/questpdf/2026.5.0/questpdf.2026.5.0.nupkg.sha512",
     "/home/santiago/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "/home/santiago/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "/home/santiago/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",

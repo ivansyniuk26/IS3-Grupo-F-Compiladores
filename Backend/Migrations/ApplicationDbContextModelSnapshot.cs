@@ -41,6 +41,28 @@ namespace Backend.Migrations
 
                     b.ToTable("Acreditaciones");
                 });
+
+            modelBuilder.Entity("Backend.Models.CertificadoEmitido", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CodigoVerificacion")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
+
+                    b.Property<DateTime>("FechaEmision")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("InscripcionId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CertificadosEmitidos");
+                });
 #pragma warning restore 612, 618
         }
     }
