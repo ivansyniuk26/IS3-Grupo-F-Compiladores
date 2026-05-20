@@ -7,6 +7,8 @@ QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
 
 // Add services to the container.
 builder.Services.AddControllers();
+// Registro del servicio de PDFs
+builder.Services.AddScoped<Backend.Services.CertificadoService>();
 
 // Configuración de PostgreSQL
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
