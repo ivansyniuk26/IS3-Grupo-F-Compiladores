@@ -1,0 +1,79 @@
+@page "/ingreso"
+@inject HttpClient Http
+
+<PageTitle>Puerta de Ingreso</PageTitle>
+
+<div class="container mt-4">
+    <h2>Control de Acreditaciones</h2>
+    <p>Escanee el código o busque al participante para registrar su ingreso.</p>
+
+    <div class="card p-4 mb-4 shadow-sm">
+        <div class="row align-items-end">
+            <div class="col-md-8">
+                <label class="form-label">Término de búsqueda (Ej. ID, Nombre o Localidad como 'Montecarlo')</label>
+                <input type="text" class="form-control" @bind="terminoBusqueda" placeholder="Ingrese datos del inscripto..." />
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary w-100" @onclick="BuscarParticipante">
+                    Buscar Participante
+                </button>
+            </div>
+        </div>
+    </div>
+
+    @if (resultados != null && resultados.Any())
+    {
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID Inscripción</th>
+                    <th>Estado</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var participante in resultados)
+                {
+                    <tr>
+                        <td>@participante</td>
+                        <td><span class="badge bg-warning text-dark">Pendiente</span></td>
+                        <td>
+                            <button class="btn btn-success btn-sm" @onclick="() => RegistrarIngreso(participante)">
+                                Registrar Ingreso
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else if (busquedaRealizada)
+    {
+        <div class="alert alert-info">No se encontraron inscriptos con ese término.</div>
+    }
+</div>
+
+@code {
+    private string terminoBusqueda = "";
+    private bool busquedaRealizada = false;
+    private List<string> resultados = new(); // Lista simulada temporalmente
+
+    private async Task BuscarParticipante()
+    {
+        // Acá luego conectaremos el Http.GetFromJsonAsync a tu API (Issue 3)
+        busquedaRealizada = true;
+        
+        // Simulación visual para la entrega del Issue 4
+        if (!string.IsNullOrWhiteSpace(terminoBusqueda))
+        {
+            resultados = new List<string> { Guid.NewGuid().ToString() };
+        }
+    }
+
+    private async Task RegistrarIngreso(string inscripcionId)
+    {
+        // Acá luego conectaremos el Http.PostAsJsonAsync a tu API (Issue 2)
+        Console.WriteLine($"Ingreso registrado para: {inscripcionId}");
+        resultados.Remove(inscripcionId);
+    }
+}
