@@ -2,7 +2,7 @@
 **Estado:** Propuesto
 **Fecha:** 2026-06-17
 **Decisores:** Silva Santiago Ramón, Syniuk Marcos Ivan
-**Relacionado:** spec_gestion_eventos, issue_latencia_consultas
+**Relacionado:** spec_gestion_eventos, issue_latencia_consultas 
 
 **Contexto**
 * **Qué problema se está resolviendo:** Se anticipa una latencia alta en las consultas a la base de datos debido al crecimiento de la misma. Específicamente, el listado de eventos es público y será accedido masivamente por usuarios no autenticados que aplican filtros por fechas (eventos a futuro o pasados).
