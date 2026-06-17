@@ -1,4 +1,3 @@
-Markdown
 **Título:** ADR-002 Implementación de Caché Distribuida para el Listado Público
 **Estado:** Propuesto
 **Fecha:** 2026-06-17
